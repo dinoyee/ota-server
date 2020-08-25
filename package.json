@@ -1,0 +1,17 @@
+{
+  "name": "ota-server",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run": "node bin/server.js"
+  },
+  "author": "Dino",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "https": "^1.0.0",
+    "ip": "^1.1.5",
+    "shelljs": "^0.8.4"
+  }
+}
