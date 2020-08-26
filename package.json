@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "run": "node bin/server.js"
+    "run": "node server/server.js"
   },
   "author": "Dino",
   "license": "ISC",

@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/server/bash
 
 ip=$1
 cerDir="$HOME/.ota-server/"$ip"/"
