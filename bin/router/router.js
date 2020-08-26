@@ -1,16 +1,12 @@
 const express = require('express')
-const pageRouter = express.Router()
+const path = require('path')
 const apiRouter = express.Router()
-
-const pageIndex = _require('/router/page/index')
 
 const packageApi = _require('/router/api/packageApi')
 
 function setRouter(app) {
-    // page
-    pageRouter.route('/').get(pageIndex)
-    app.use('/', pageRouter)
-
+    // vue
+    app.use(express.static(path.join(__dirname, '../../app', 'dist')))
     // api
     apiRouter.route('/package/:method').post(packageApi)
     app.use('/api', apiRouter)
