@@ -117,3 +117,6 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+# apk & ipa files
+*.apk
+*.ipa
