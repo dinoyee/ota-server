@@ -1,19 +1,16 @@
-// Import
-import express from 'express'
-import path from 'path'
-import cookieParser from 'cookie-parser'
-import logger from 'morgan'
+import express from 'express';
+import path from 'path';
+import cookieParser from 'cookie-parser';
+import logger from 'morgan';
 
-// Route
-import indexRouter from './routes'
+import router from './routes';
 
-// App setting
 const app = express();
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'ota-vue/dist')));
-app.use('/', indexRouter);
+app.use('/', router);
 
-export default app
+export default app;
