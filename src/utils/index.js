@@ -1,5 +1,5 @@
-const fs = require('fs')
-const path = require('path')
+import fs from 'fs'
+import path from 'path'
 
 const getTemplate = (template) => {
     const file = path.join(__dirname, '..', 'templates') + '/' + template
@@ -11,4 +11,4 @@ const getTemplate = (template) => {
     }
 }
 
-module.exports = {getTemplate}
+export { getTemplate }
