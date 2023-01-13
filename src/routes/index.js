@@ -1,20 +1,24 @@
 import express from 'express';
-import { getTemplate } from '../utils';
+
+import customer from './customer';
 
 const router = express.Router();
 
-const mustache = require('mustache');
+router.use('/customer', customer);
 
-/* GET home page. */
-router.get('/', (req, res) => {
-  res.render('index', { title: 'Express' });
-});
+// import { getTemplate } from '../utils';
 
-router.get('/oo/plist', async (req, res) => {
-  const template = getTemplate('plist.xml');
-  const render = mustache.render(template, {});
-  res.set('Content-Type', 'text/plain; charset=utf-8');
-  res.send(render);
-});
+// const mustache = require('mustache');
+//
+// router.get('/', (req, res) => {
+//   res.render('index', { title: 'Express' });
+// });
+//
+// router.get('/oo/plist', async (req, res) => {
+//   const template = getTemplate('plist.xml');
+//   const render = mustache.render(template, {});
+//   res.set('Content-Type', 'text/plain; charset=utf-8');
+//   res.send(render);
+// });
 
 export default router;

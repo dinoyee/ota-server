@@ -1,10 +1,12 @@
 import http from 'http';
 
 import app from '../app';
-import { normalizePort, Env } from '../utils';
-import { LogI } from '../utils/debug';
+import '../utils/db';
 
-const port = normalizePort(Env().PORT || '3000');
+import { normalizePort, Env } from '../utils';
+import { LogI } from '../utils/logger';
+
+const port = normalizePort(Env.PORT || '3000');
 
 app.set('port', port);
 
