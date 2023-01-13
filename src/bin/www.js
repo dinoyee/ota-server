@@ -2,11 +2,12 @@ import debugLib from 'debug';
 import http from 'http';
 
 import app from '../app';
-import { normalizePort } from '../utils';
+import { normalizePort, Env } from '../utils';
 
 const debug = debugLib('ota-server:server');
 
-const port = normalizePort(process.env.PORT || '3000');
+const port = normalizePort(Env().PORT || '3000');
+
 app.set('port', port);
 
 const server = http.createServer(app);
