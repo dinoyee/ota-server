@@ -1,10 +1,8 @@
-import debugLib from 'debug';
 import http from 'http';
 
 import app from '../app';
 import { normalizePort, Env } from '../utils';
-
-const debug = debugLib('ota-server:server');
+import { LogI } from '../utils/debug';
 
 const port = normalizePort(Env().PORT || '3000');
 
@@ -30,5 +28,5 @@ server.on('listening', () => {
   const bind = typeof addr === 'string'
     ? `pipe ${addr}`
     : `port ${addr.port}`;
-  debug(`Listening on ${bind}`);
+  LogI(`Listening on ${bind}`);
 });
