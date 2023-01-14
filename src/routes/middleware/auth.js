@@ -1,17 +1,15 @@
 import jwt from 'jsonwebtoken';
 import { Env } from '../../utils';
+import { LogD } from '../../utils/logger';
 
 export default async (req, res, next) => {
-  let token;
+  const token = req.headers.authorization || '';
+  let userInfo;
   try {
-    token = req.headers.authorization;
+    userInfo = await jwt.verify(token, Env.JWT_SIGN_SECRET);
+    res.locals.userInfo = userInfo;
   } catch (e) {
-    token = '';
+    return res.status(401).json({ message: 'Unauthorized' });
   }
-  jwt.verify(token, Env.JWT_SIGN_SECRET, (err) => {
-    if (err) {
-      return res.status(401).json({ message: 'Unauthorized' });
-    }
-    return next();
-  });
+  return next();
 };
