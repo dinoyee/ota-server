@@ -12,3 +12,7 @@ global.LogD = (msg) => {
 global.LogE = (msg) => {
   debug(`${Env.NPM_PACKAGE_NAME}::Error`)(msg);
 };
+
+global.LogW = (msg) => {
+  debug(`${Env.NPM_PACKAGE_NAME}::Warn`)(msg);
+};
