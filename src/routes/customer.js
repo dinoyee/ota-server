@@ -4,7 +4,6 @@ import jwt from 'jsonwebtoken';
 import auth from './middleware/auth';
 import UserSchema from '../models/user';
 import { Env } from '../utils';
-import { LogD } from '../utils/logger';
 
 const router = express.Router();
 

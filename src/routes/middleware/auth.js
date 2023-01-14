@@ -1,6 +1,5 @@
 import jwt from 'jsonwebtoken';
 import { Env } from '../../utils';
-import { LogD } from '../../utils/logger';
 
 export default async (req, res, next) => {
   const token = req.headers.authorization || '';

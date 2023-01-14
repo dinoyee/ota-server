@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-import { LogE, LogI } from './logger';
 import { Env } from './index';
 
 const mongoDB = Env.MONGO_URL;

@@ -1,10 +1,10 @@
 import http from 'http';
 
 import app from '../app';
+import '../utils/logger';
 import '../utils/db';
 
 import { normalizePort, Env } from '../utils';
-import { LogI } from '../utils/logger';
 
 const port = normalizePort(Env.PORT || '3000');
 

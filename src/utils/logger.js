@@ -1,13 +1,14 @@
 import debug from 'debug';
 import { Env } from './index';
 
-export const LogI = (msg) => {
+global.LogI = (msg) => {
   debug(`${Env.NPM_PACKAGE_NAME}::Info`)(msg);
 };
-export const LogD = (msg) => {
+
+global.LogD = (msg) => {
   debug(`${Env.NPM_PACKAGE_NAME}::Debug`)(msg);
 };
 
-export const LogE = (msg) => {
+global.LogE = (msg) => {
   debug(`${Env.NPM_PACKAGE_NAME}::Error`)(msg);
 };
