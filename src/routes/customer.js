@@ -2,15 +2,16 @@ import express from 'express';
 import jwt from 'jsonwebtoken';
 
 import auth from './middleware/auth';
-import UserSchema from '../models/user';
+import { login, getUserInfo } from '../repository/user';
 
 const router = express.Router();
 
 router.post('/login', async (req, res) => {
   const { username, password } = req.body;
-  const user = await UserSchema.findOne({ username, password });
+  const user = await login(username, password);
   if (user) {
-    const token = jwt.sign({ username, password }, Env.JWT_SIGN_SECRET);
+    const { _id } = user;
+    const token = jwt.sign({ id: _id }, Env.JWT_SIGN_SECRET);
     return res
       .status(200)
       .json({
@@ -30,9 +31,10 @@ router.post('/login', async (req, res) => {
 router.use(auth);
 
 router.post('/getUserInfo', async (req, res) => {
-  const { userInfo } = res.locals;
+  const { id } = res.locals.userInfo;
+  const info = await getUserInfo(id);
   return res.status(200).json({
-    data: userInfo,
+    data: info,
   });
 });
 export default router;
