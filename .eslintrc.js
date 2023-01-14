@@ -8,6 +8,7 @@ module.exports = {
     LogI: 'readonly',
     LogD: 'readonly',
     LogE: 'readonly',
+    Env: 'readonly',
   },
   overrides: [
   ],

@@ -1,10 +1,12 @@
 import http from 'http';
 
-import app from '../app';
-import '../utils/logger';
-import '../utils/db';
+import '../plugin/env';
+import '../plugin/logger';
+import '../plugin/db';
 
-import { normalizePort, Env } from '../utils';
+import app from '../app';
+
+import { normalizePort } from '../utils';
 
 const port = normalizePort(Env.PORT || '3000');
 

@@ -1,5 +1,4 @@
 import debug from 'debug';
-import { Env } from './index';
 
 global.LogI = (msg) => {
   debug(`${Env.NPM_PACKAGE_NAME}::Info`)(msg);

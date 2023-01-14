@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-import { Env } from './index';
 
 const mongoDB = Env.MONGO_URL;
 mongoose.set('strictQuery', false);

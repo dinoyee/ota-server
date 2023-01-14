@@ -1,5 +1,4 @@
 import jwt from 'jsonwebtoken';
-import { Env } from '../../utils';
 
 export default async (req, res, next) => {
   const token = req.headers.authorization || '';
