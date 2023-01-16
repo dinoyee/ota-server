@@ -1,17 +1,17 @@
 import express from 'express';
-import jwt from 'jsonwebtoken';
 
 import auth from './middleware/auth';
+import { sign } from '../utils/jwt';
 import { doLogin, getUserInfo } from '../repository/user';
 
 const router = express.Router();
 
-router.post('/login', async (req, res) => {
+router.post('/doLogin', async (req, res) => {
   const { username, password } = req.body;
   const user = await doLogin(username, password);
   if (user) {
     const { _id } = user;
-    const token = jwt.sign({ id: _id }, Env.JWT_SIGN_SECRET);
+    const token = await sign({ id: _id });
     return res
       .status(200)
       .json({
