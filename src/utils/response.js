@@ -27,6 +27,15 @@ const failed = (res, e) => {
     });
 };
 
+const mongoError = (res, e) => {
+  const { code, message } = e;
+  res.status(400)
+    .json({
+      isMongoError: true,
+      errorCode: code,
+      message,
+    });
+};
 export default {
-  success, unauthorized, forbidden, failed,
+  success, unauthorized, forbidden, failed, mongoError,
 };
