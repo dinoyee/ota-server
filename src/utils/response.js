@@ -9,13 +9,13 @@ const success = (res, data) => res
 const unauthorized = (res) => res
   .status(401)
   .json({
-    message: error.OTA_401.message,
+    message: error.UNAUTHORIZED.message,
   });
 
 const forbidden = (res) => res
   .status(403)
   .json({
-    message: error.OTA_403.message,
+    message: error.FORBIDDEN.message,
   });
 
 const failed = (res, e) => {

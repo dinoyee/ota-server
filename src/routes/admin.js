@@ -18,7 +18,7 @@ router.post('/doLogin', async (req, res) => {
     }
     return response.forbidden(res);
   }
-  return response.failed(res, error.OTA_001);
+  return response.failed(res, error.LOGIN_FAILED);
 });
 
 router.use(auth);
@@ -29,6 +29,6 @@ router.post('/doRegister', async (req, res) => {
   if (user) {
     return response.success(res, { user });
   }
-  return response.failed(res, error.OTA_002);
+  return response.failed(res, error.REGISTER_FAILED);
 });
 export default router;
