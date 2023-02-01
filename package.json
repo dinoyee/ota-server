@@ -9,7 +9,8 @@
     "clean": "rimraf dist",
     "build": "babel src --out-dir dist --copy-files",
     "prod": "NODE_ENV=production npm-run-all clean build server:prod",
-    "watch": "nodemon"
+    "watch": "nodemon",
+    "dbrun": "mongod --dbpath ./.db"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
