@@ -16,7 +16,7 @@ if (Env.MONGO_USER === undefined || Env.MONGO_PASS === undefined) {
 
 mongoose.connect(mongoDB, dbOptions)
   .then(async () => {
-    LogI('Connected to MongoDB');
+    LogI(`Connected to MongoDB ::: ${Env.MONGO_URL}`);
     const admin = await findAdmin();
     if (!admin) {
       const user = await createAdmin();
