@@ -1,0 +1,20 @@
+###
+# curl -X POST --location "http://localhost:9000/admin/doRegister"
+#    -H "authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZGE4Mjg2NDVjNGUyM2ViZDNhZjIzOCIsImlhdCI6MTY3NTMzNzk2NSwiZXhwIjoxNjc2MjAxOTY1fQ.Jwvz7u8PURJhuSBhMtI2b-HH7n27GJvWj-gdb6MguOs"
+#    -H "Content-Type: application/json"
+#    -d "{
+#          \"username\": \"dino\",
+#          \"password\": \"1234qwer\",
+#          \"isAdmin\": false
+#        }"
+POST http://localhost:9000/admin/doRegister
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZGE4Mjg2NDVjNGUyM2ViZDNhZjIzOCIsImlhdCI6MTY3NTMzNzk2NSwiZXhwIjoxNjc2MjAxOTY1fQ.Jwvz7u8PURJhuSBhMtI2b-HH7n27GJvWj-gdb6MguOs
+Content-Type: application/json
+
+{
+  "username": "dino",
+  "password": "1234qwer",
+  "isAdmin": false
+}
+
+###

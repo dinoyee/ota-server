@@ -1,0 +1,154 @@
+POST http://localhost:9000/admin/doRegister
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZGE4Mjg2NDVjNGUyM2ViZDNhZjIzOCIsImlhdCI6MTY3NTMzNzk2NSwiZXhwIjoxNjc2MjAxOTY1fQ.Jwvz7u8PURJhuSBhMtI2b-HH7n27GJvWj-gdb6MguOs
+Content-Type: application/json
+Content-Length: 70
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "username": "dino",
+  "password": "1234qwer",
+  "isAdmin": false
+}
+
+<> 2023-02-02T200502.400.json
+
+###
+
+POST http://localhost:9000/customer/getUserInfo
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZGE4Mjg2NDVjNGUyM2ViZDNhZjIzOCIsImlhdCI6MTY3NTMzNzgxNCwiZXhwIjoxNjc2MjAxODE0fQ.3nCAoIpPPcDYOYXI8fLDzhqGGDocVKCzB_h8vf_EgsQ
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-02T200408.200.json
+
+###
+
+POST http://localhost:9000/customer/doLogin
+Content-Type: application/json
+Content-Length: 48
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+<> 2023-02-02T200401.200.json
+
+###
+
+POST http://localhost:9000/customer/doLogin
+Content-Type: application/json
+Content-Length: 48
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+<> 2023-02-02T200308.200.json
+
+###
+
+POST http://localhost:9000/customer/doLogin
+Content-Type: application/json
+Content-Length: 48
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+<> 2023-02-02T200203.200.json
+
+###
+
+POST http://localhost:9000/customer/doLogin
+Content-Type: application/json
+Content-Length: 48
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+<> 2023-02-02T200113.200.json
+
+###
+
+POST http://localhost:9000/admin/doRegister
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZGE4Mjg2NDVjNGUyM2ViZDNhZjIzOCIsImlhdCI6MTY3NTMzNzk2NSwiZXhwIjoxNjc2MjAxOTY1fQ.Jwvz7u8PURJhuSBhMtI2b-HH7n27GJvWj-gdb6MguOs
+Content-Type: application/json
+Content-Length: 70
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "username": "dino",
+  "password": "1234qwer",
+  "isAdmin": false
+}
+
+<> 2023-02-02T194004.200.json
+
+###
+
+POST http://localhost:9000/customer/doLogin
+Content-Type: application/json
+Content-Length: 48
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+<> 2023-02-02T193925.200.json
+
+###
+
+POST http://localhost:9000/customer/getUserInfo
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZGE4Mjg2NDVjNGUyM2ViZDNhZjIzOCIsImlhdCI6MTY3NTMzNzgxNCwiZXhwIjoxNjc2MjAxODE0fQ.3nCAoIpPPcDYOYXI8fLDzhqGGDocVKCzB_h8vf_EgsQ
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2023-02-02T193723.200.json
+
+###
+
+POST http://localhost:9000/customer/doLogin
+Content-Type: application/json
+Content-Length: 48
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.5)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+<> 2023-02-02T193654.200.json
+
+###
+

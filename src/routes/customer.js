@@ -12,9 +12,9 @@ router.post('/doLogin', async (req, res) => {
   const { username, password } = req.body;
   const user = await doLogin(username, password);
   if (user) {
-    const { _id } = user;
+    const { _id, isAdmin } = user;
     const token = await sign({ id: _id });
-    return response.success(res, { token });
+    return response.success(res, { token, username, isAdmin });
   }
   return response.failed(res, error.LOGIN_FAILED);
 });
