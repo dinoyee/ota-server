@@ -5,11 +5,14 @@ import { sign } from '../utils/jwt';
 import { doLogin, getUserInfo } from '../repository/user';
 import response from '../utils/response';
 import error from '../utils/error';
+import { sha1 } from '../utils/crypto';
 
 const router = express.Router();
 
 router.post('/doLogin', async (req, res) => {
-  const { username, password } = req.body;
+  const { username } = req.body;
+  let { password } = req.body;
+  password = sha1(password);
   const user = await doLogin(username, password);
   if (user) {
     const { _id, isAdmin } = user;

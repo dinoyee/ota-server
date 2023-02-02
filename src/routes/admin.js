@@ -1,5 +1,5 @@
 import express from 'express';
-import { doRegister } from '../repository/user';
+import { doRegister, resetPassword } from '../repository/user';
 import auth from './middleware/auth';
 import admin from './middleware/admin';
 import response from '../utils/response';
@@ -21,5 +21,15 @@ router.post('/doRegister', async (req, res) => {
     return response.mongoError(res, err);
   }
   return response.failed(res, error.REGISTER_FAILED);
+});
+
+router.post('/resetPassword', async (req, res) => {
+  const { username, password } = req.body;
+  const result = await resetPassword(username, password);
+  const { matchedCount } = result;
+  if (matchedCount > 0) {
+    return response.success(res, {});
+  }
+  return response.failed(res, error.RESET_PASSWORD_FAILED);
 });
 export default router;

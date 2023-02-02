@@ -7,6 +7,10 @@ export default {
     code: 80002,
     message: 'Register failed',
   },
+  RESET_PASSWORD_FAILED: {
+    code: 80003,
+    message: 'Reset password failed',
+  },
   UNAUTHORIZED: {
     message: 'Unauthorized',
   },

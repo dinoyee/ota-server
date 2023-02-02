@@ -18,3 +18,20 @@ Content-Type: application/json
 }
 
 ###
+# curl -X POST --location "http://localhost:9000/admin/resetPassword"
+#    -H "authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZGJhYTgyYmNmMDFkNWZkZGIyMThhOSIsImlhdCI6MTY3NTM0MDU0NywiZXhwIjoxNjc2MjA0NTQ3fQ.tJzujSZD-u6oz79MzFPWgj75MInQXwk58CbuEMmfw38"
+#    -H "Content-Type: application/json"
+#    -d "{
+#          \"username\": \"dino\",
+#          \"password\": \"31231231231212\"
+#        }"
+POST http://localhost:9000/admin/resetPassword
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZGJhYTgyYmNmMDFkNWZkZGIyMThhOSIsImlhdCI6MTY3NTM0MDU0NywiZXhwIjoxNjc2MjA0NTQ3fQ.tJzujSZD-u6oz79MzFPWgj75MInQXwk58CbuEMmfw38
+Content-Type: application/json
+
+{
+  "username": "dino",
+  "password": "31231231231212"
+}
+
+###
